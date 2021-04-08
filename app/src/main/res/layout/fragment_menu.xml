@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/toolbar"
+        android:text="@string/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+
+    <Button
+        android:id="@+id/play"
+        style="@style/button"
+        android:layout_marginTop="30sp"
+        android:text="@string/play"
+        android:background="@drawable/item_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rules"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/rules"
+        style="@style/button"
+        android:background="@drawable/item_menu"
+        android:layout_marginTop="20dp"
+        android:text="@string/rules"
+        app:layout_constraintEnd_toEndOf="@+id/play"
+        app:layout_constraintBottom_toTopOf="@id/setting"
+        app:layout_constraintStart_toStartOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/play" />
+
+    <Button
+        android:id="@+id/setting"
+        style="@style/button"
+        android:text="@string/setting"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/item_menu"
+        app:layout_constraintEnd_toEndOf="@+id/play"
+        app:layout_constraintStart_toStartOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/rules" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,69 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="button">
+        <item name="android:layout_height">74dp</item>
+        <item name="android:layout_width">185dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="toolbar" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_toolbar</item>
+        <item name="android:translationZ">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:background">@drawable/background_toolbar</item>
+    </style>
+
+
+
+    <style name="smallCaps" parent="TextAppearance.AppCompat.Button">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="smallCapsAndSelectedItemText" parent="selected_item_text">
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style parent="Theme.AppCompat.Dialog" name="FullScreenDialogStyle">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="selected_item_image">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+
+    <style name="selected_item_text">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">110dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:translationZ">1dp</item>
+        <item name="android:background">@drawable/item_field</item>
+    </style>
+
+</resources>

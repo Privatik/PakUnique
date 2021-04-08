@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.unique.pak.viewmodel.SettingViewModel"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="@string/setting"
+        style="@style/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/sound"
+        style="@style/button"
+        android:layout_marginTop="15dp"
+        android:text="@string/sound"
+        android:gravity="center"
+        android:translationZ="3dp"
+        android:background="@drawable/item_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/sound_change"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:src='@{viewmodel.sound? @drawable/complete : @drawable/cancel}'
+        android:translationZ="3dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/sound"
+        app:layout_constraintStart_toStartOf="@id/sound"
+        app:layout_constraintTop_toBottomOf="@id/sound"/>
+
+    <TextView
+        android:id="@+id/vibro"
+        style="@style/button"
+        android:layout_marginTop="15dp"
+        android:text="@string/vibro"
+        android:gravity="center"
+        android:translationZ="3dp"
+        android:background="@drawable/item_menu"
+        app:layout_constraintEnd_toEndOf="@id/sound"
+        app:layout_constraintStart_toStartOf="@id/sound"
+        app:layout_constraintTop_toBottomOf="@+id/sound_change" />
+
+    <ImageView
+        android:id="@+id/vibro_change"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:padding="10dp"
+        android:src='@{viewmodel.vibro? @drawable/complete : @drawable/cancel}'
+        android:text="@string/rules"
+        android:translationZ="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/sound"
+        app:layout_constraintStart_toStartOf="@+id/sound"
+        app:layout_constraintTop_toBottomOf="@+id/vibro" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/close"
+        android:translationZ="3dp"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vibro_change" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

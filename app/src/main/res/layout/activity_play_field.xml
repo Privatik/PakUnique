@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.unique.pak.viewmodel.PlayFieldViewModel"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PlayFieldActivity"
+    android:background="@drawable/backgroundm">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/toolbar"
+        android:text="@string/_30_second_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/image_clock"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:src="@drawable/clock_30"
+        android:layout_marginTop="20dp"
+        android:translationZ="2dp"
+        android:rotation="190"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <View
+        android:id="@+id/view2"
+        style="@style/selected_item_text"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+    <Button
+        android:id="@+id/time"
+        style="@style/smallCapsAndSelectedItemText"
+        android:background="@android:color/transparent"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_clock"
+        app:layout_constraintEnd_toStartOf="@+id/count_coin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_clock" />
+
+    <ImageView
+        android:id="@+id/image_coin"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/coin_icon"
+        android:translationZ="4dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/count_coin"
+        app:layout_constraintTop_toTopOf="@id/image_clock" />
+
+    <Button
+        android:id="@+id/count_coin"
+        style="@style/selected_item_text"
+        android:textSize="23sp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coin_field"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/scope"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <View
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/capter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/carpet"
+        android:scaleType="fitXY"
+        android:rotation="180"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/point"
+        app:layout_constraintBottom_toBottomOf="@id/point" />
+
+    <TextView
+        android:id="@+id/scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textSize="28sp"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintTop_toTopOf="@id/capter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/capter"/>
+
+    <TextView
+        android:id="@+id/scope_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scope"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

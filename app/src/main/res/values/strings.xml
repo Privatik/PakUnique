@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Pak Unique</string>
+    <string name="loading">Loading...</string>
+    <string name="menu">menu</string>
+    <string name="play">Play</string>
+    <string name="rules">rules</string>
+    <string name="setting">setting</string>
+
+    <string name="rules_text">There is matrix of where each cell cjnsists of a number. All the numbers looks same but there is a unique number which is different of all others. In the time span of 30 seconds, you have to select maximum unique numbers to maximise your score. For each correct selection.</string>
+    <string name="sound">Sound</string>
+    <string name="vibro">Vibro</string>
+    <string name="level_of_complexity">level of complexity</string>
+    <string name="easy">easy</string>
+    <string name="medium">medium</string>
+    <string name="hard">hard</string>
+    <string name="_30_sec">30 sec</string>
+    <string name="_60_sec">60 sec</string>
+    <string name="start">Start</string>
+    <string name="_30_second_game">30 second\n game!</string>
+    <string name="score">Score:</string>
+</resources>

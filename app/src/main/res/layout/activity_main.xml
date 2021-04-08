@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundm"
+    tools:context=".ui.activity.MainActivity">
+
+ <androidx.fragment.app.FragmentContainerView
+     android:id="@+id/content"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:translationZ="3dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/capter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/carpet"
+        android:scaleType="fitXY"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/icon_buda"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/buda"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <ImageView
+        android:layout_width="575dp"
+        android:layout_height="603dp"
+        android:src="@drawable/flesh"
+        app:layout_constraintTop_toTopOf="@+id/icon_buda"
+        app:layout_constraintBottom_toBottomOf="@id/icon_buda"
+        app:layout_constraintStart_toStartOf="@id/icon_buda"
+        app:layout_constraintEnd_toEndOf="@id/icon_buda"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
